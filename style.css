@@ -40,6 +40,14 @@ ul li {
   margin: 1rem 0;
 }
 
+ul li label {
+  cursor: pointer;
+}
+
+input {
+  cursor: pointer;
+}
+
 button {
   background-color: #3A71F0;
   border: none;
