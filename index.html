@@ -9,6 +9,33 @@
   <script src="app.js" defer></script>
 </head>
 <body>
-  <h1>New App</h1>
+  <div class="quiz-container">
+    <div class="quiz-header">
+      <h2 id="question">Question Text</h2>
+      <ul>
+        <li>
+          <input type="radio" id="a" name="answer">
+          <label id="a_text" for="a"></label>
+        </li>
+        <li>
+          <input type="radio" id="b" name="answer">
+          <label id="b_text" for="b"></label>
+        </li>
+        <li>
+          <input type="radio" id="c" name="answer">
+          <label id="c_text" for="c"></label>
+        </li>
+        <li>
+          <input type="radio" id="d" name="answer">
+          <label id="d_text" for="d"></label>
+        </li>
+        <li id="e">
+          <input type="radio" id="e" name="answer">
+          <label id="e_text" for="e"></label>
+        </li>
+      </ul>
+    </div>
+    <button id='submit'>Submit</button>
+  </div>
 </body>
 </html>

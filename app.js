@@ -1,5 +1,12 @@
 const quizData = [
   {
+    question: 'What year was JavaScript created?',
+    a: '1215',
+    b: '1990',
+    c: '1995',
+    d: '2001',
+    correct: 'c'
+  }, {
     question: 'What year was I born?',
     a: '1215',
     b: '1990',
@@ -37,4 +44,40 @@ const quizData = [
     d: 'It is a method for creating websites using drag and drop design software',
     correct: 'a'
   }
-]
+];
+
+const questionElement = document.getElementById('question')
+const a_text = document.getElementById('a_text');
+const b_text = document.getElementById('b_text');
+const c_text = document.getElementById('c_text');
+const d_text = document.getElementById('d_text');
+const e_text = document.getElementById('e_text');
+const submitButton = document.getElementById('submit');
+
+let currentQuiz = 0;
+
+loadQuiz();
+
+function loadQuiz() {
+  const currentQuizData = quizData[currentQuiz];
+
+  questionElement.innerText = currentQuizData.question;
+  a_text.innerText = currentQuizData.a;
+  b_text.innerText = currentQuizData.b;
+  c_text.innerText = currentQuizData.c;
+  d_text.innerText = currentQuizData.d;
+
+  // check if there is an answer option for e. If not, set display = none
+  if(typeof(currentQuizData.e) != 'undefined' && currentQuizData.e != null){
+    document.getElementById('e').style.display = '';
+    e_text.innerText = currentQuizData.e;
+  } else{
+    document.getElementById('e').style.display = 'none';
+  };
+};
+
+submitButton.addEventListener('click', () => {
+  currentQuiz++;
+
+  loadQuiz();
+});
