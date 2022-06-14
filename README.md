@@ -9,3 +9,6 @@ This is a functional 5 question quiz using data inputted via JavaScript.
 ## To Be Completed
 - Randomize question order
 - Randomize answer order
+(will need to change how data is formatted and displayed in the page)
+- Ability to go over quiz answers before submitting/go back to previous question to change the answer
+- results that show which questions were incorrect and what the correct answer was
